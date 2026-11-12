@@ -42,6 +42,6 @@ class DescuentosTest {
 
     @Test
     void rechazaClientesDesconocidos() {
-        assertEquals("Tipo de cliente no vÃ¡lido", assertThrows(IllegalArgumentException.class, () -> descuentos.aplicarDescuento(3000, "vip")).getMessage());
+        assertEquals("Tipo de cliente no válido", assertThrows(IllegalArgumentException.class, () -> descuentos.aplicarDescuento(3000, "vip")).getMessage());
     }
 }
