@@ -29,4 +29,9 @@ class DescuentosTest {
     void redondeaHaciaAbajoAlPesoEntero() {
         assertEquals(1799, descuentos.aplicarDescuento(1999, "frecuente"));
     }
+
+    @Test
+    void valorCeroNoGeneraCobro() {
+        assertEquals(0, descuentos.aplicarDescuento(0, "convenio"));
+    }
 }
