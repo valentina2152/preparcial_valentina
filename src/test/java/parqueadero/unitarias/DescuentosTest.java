@@ -34,4 +34,9 @@ class DescuentosTest {
     void valorCeroNoGeneraCobro() {
         assertEquals(0, descuentos.aplicarDescuento(0, "convenio"));
     }
+
+    @Test
+    void rechazaValoresNegativos() {
+        assertEquals("El valor no puede ser negativo", assertThrows(IllegalArgumentException.class, () -> descuentos.aplicarDescuento(-1, "ninguno")).getMessage());
+    }
 }
