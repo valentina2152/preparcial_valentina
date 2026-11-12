@@ -24,4 +24,9 @@ class DescuentosTest {
     void clienteConConvenioRecibeVeintePorCiento() {
         assertEquals(20000, descuentos.aplicarDescuento(25000, "convenio"));
     }
+
+    @Test
+    void redondeaHaciaAbajoAlPesoEntero() {
+        assertEquals(1799, descuentos.aplicarDescuento(1999, "frecuente"));
+    }
 }
